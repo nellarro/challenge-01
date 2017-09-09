@@ -74,7 +74,7 @@ module.exports.findInbox = (db, encodedName) => {
  *
  * ({ messages: Array<Object> }, string): string
  */
-module.exports.findNextMessage = function (inbox, lastHash) {
+module.exports.findNextMessage = (inbox, lastHash) => {
   // find the message which comes after lastHash
   let found
   for (let i = 0; i < inbox.messages.length; i += 1) {
